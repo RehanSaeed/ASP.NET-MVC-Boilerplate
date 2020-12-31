@@ -16,12 +16,12 @@ namespace ApiTemplate.Commands
     {
         private readonly IActionContextAccessor actionContextAccessor;
         private readonly ICarRepository carRepository;
-        private readonly IMapper<Models.Car, Car> carMapper;
+        private readonly IImmutableMapper<Models.Car, Car> carMapper;
 
         public GetCarCommand(
             IActionContextAccessor actionContextAccessor,
             ICarRepository carRepository,
-            IMapper<Models.Car, Car> carMapper)
+            IImmutableMapper<Models.Car, Car> carMapper)
         {
             this.actionContextAccessor = actionContextAccessor;
             this.carRepository = carRepository;

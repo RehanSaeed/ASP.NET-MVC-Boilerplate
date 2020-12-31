@@ -15,7 +15,7 @@ namespace ApiTemplate.Commands
         private readonly IActionContextAccessor actionContextAccessor;
         private readonly IObjectModelValidator objectModelValidator;
         private readonly ICarRepository carRepository;
-        private readonly IMapper<Models.Car, Car> carToCarMapper;
+        private readonly IImmutableMapper<Models.Car, Car> carToCarMapper;
         private readonly IMapper<Models.Car, SaveCar> carToSaveCarMapper;
         private readonly IMapper<SaveCar, Models.Car> saveCarToCarMapper;
 
@@ -23,7 +23,7 @@ namespace ApiTemplate.Commands
             IActionContextAccessor actionContextAccessor,
             IObjectModelValidator objectModelValidator,
             ICarRepository carRepository,
-            IMapper<Models.Car, Car> carToCarMapper,
+            IImmutableMapper<Models.Car, Car> carToCarMapper,
             IMapper<Models.Car, SaveCar> carToSaveCarMapper,
             IMapper<SaveCar, Models.Car> saveCarToCarMapper)
         {

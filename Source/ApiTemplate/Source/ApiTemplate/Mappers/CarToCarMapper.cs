@@ -7,7 +7,7 @@ namespace ApiTemplate.Mappers
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Routing;
 
-    public class CarToCarMapper : IMapper<Models.Car, Car>
+    public class CarToCarMapper : IImmutableMapper<Models.Car, Car>
     {
         private readonly IHttpContextAccessor httpContextAccessor;
         private readonly LinkGenerator linkGenerator;
@@ -20,26 +20,24 @@ namespace ApiTemplate.Mappers
             this.linkGenerator = linkGenerator;
         }
 
-        public void Map(Models.Car source, Car destination)
+        public Car Map(Models.Car source)
         {
             if (source is null)
             {
                 throw new ArgumentNullException(nameof(source));
             }
 
-            if (destination is null)
+            return new Car()
             {
-                throw new ArgumentNullException(nameof(destination));
-            }
-
-            destination.CarId = source.CarId;
-            destination.Cylinders = source.Cylinders;
-            destination.Make = source.Make;
-            destination.Model = source.Model;
-            destination.Url = new Uri(this.linkGenerator.GetUriByRouteValues(
-                this.httpContextAccessor.HttpContext,
-                CarsControllerRoute.GetCar,
-                new { source.CarId }));
+                CarId = source.CarId,
+                Cylinders = source.Cylinders,
+                Make = source.Make,
+                Model = source.Model,
+                Url = new Uri(this.linkGenerator.GetUriByRouteValues(
+                    this.httpContextAccessor.HttpContext,
+                    CarsControllerRoute.GetCar,
+                    new { source.CarId })),
+            };
         }
     }
 }

@@ -11,12 +11,12 @@ namespace ApiTemplate.Commands
     public class PostCarCommand : IPostCarCommand
     {
         private readonly ICarRepository carRepository;
-        private readonly IMapper<Models.Car, Car> carToCarMapper;
+        private readonly IImmutableMapper<Models.Car, Car> carToCarMapper;
         private readonly IMapper<SaveCar, Models.Car> saveCarToCarMapper;
 
         public PostCarCommand(
             ICarRepository carRepository,
-            IMapper<Models.Car, Car> carToCarMapper,
+            IImmutableMapper<Models.Car, Car> carToCarMapper,
             IMapper<SaveCar, Models.Car> saveCarToCarMapper)
         {
             this.carRepository = carRepository;

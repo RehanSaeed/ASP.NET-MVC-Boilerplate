@@ -7,7 +7,7 @@ namespace ApiTemplate.ViewModels
     /// A make and model of car.
     /// </summary>
 #endif
-    public class Car
+    public record Car
     {
 #if Swagger
         /// <summary>
@@ -15,7 +15,7 @@ namespace ApiTemplate.ViewModels
         /// </summary>
         /// <example>1</example>
 #endif
-        public int CarId { get; set; }
+        public int CarId { get; init; }
 
 #if Swagger
         /// <summary>
@@ -23,7 +23,7 @@ namespace ApiTemplate.ViewModels
         /// </summary>
         /// <example>6</example>
 #endif
-        public int Cylinders { get; set; }
+        public int Cylinders { get; init; }
 
 #if Swagger
         /// <summary>
@@ -31,7 +31,7 @@ namespace ApiTemplate.ViewModels
         /// </summary>
         /// <example>Honda</example>
 #endif
-        public string Make { get; set; }
+        public string Make { get; init; }
 
 #if Swagger
         /// <summary>
@@ -39,7 +39,7 @@ namespace ApiTemplate.ViewModels
         /// </summary>
         /// <example>Civic</example>
 #endif
-        public string Model { get; set; }
+        public string Model { get; init; }
 
 #if Swagger
         /// <summary>
@@ -47,6 +47,6 @@ namespace ApiTemplate.ViewModels
         /// </summary>
         /// <example>/cars/1</example>
 #endif
-        public Uri Url { get; set; }
+        public Uri Url { get; init; }
     }
 }

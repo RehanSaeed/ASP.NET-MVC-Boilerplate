@@ -29,7 +29,7 @@ namespace ApiTemplate
 
         public static IServiceCollection AddProjectMappers(this IServiceCollection services) =>
             services
-                .AddSingleton<IMapper<Models.Car, Car>, CarToCarMapper>()
+                .AddSingleton<IImmutableMapper<Models.Car, Car>, CarToCarMapper>()
                 .AddSingleton<IMapper<Models.Car, SaveCar>, CarToSaveCarMapper>()
                 .AddSingleton<IMapper<SaveCar, Models.Car>, CarToSaveCarMapper>();
 

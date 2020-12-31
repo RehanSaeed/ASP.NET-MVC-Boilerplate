@@ -18,13 +18,13 @@ namespace ApiTemplate.Commands
         private const string LinkHttpHeaderName = "Link";
         private const int DefaultPageSize = 3;
         private readonly ICarRepository carRepository;
-        private readonly IMapper<Models.Car, Car> carMapper;
+        private readonly IImmutableMapper<Models.Car, Car> carMapper;
         private readonly IHttpContextAccessor httpContextAccessor;
         private readonly LinkGenerator linkGenerator;
 
         public GetCarPageCommand(
             ICarRepository carRepository,
-            IMapper<Models.Car, Car> carMapper,
+            IImmutableMapper<Models.Car, Car> carMapper,
             IHttpContextAccessor httpContextAccessor,
             LinkGenerator linkGenerator)
         {
