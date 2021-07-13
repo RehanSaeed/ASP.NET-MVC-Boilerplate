@@ -1,3 +1,5 @@
+#addin "nuget:?package=Cake.MinVer&version=1.0.0-rc0001"
+
 var target = Argument("Target", "Default");
 var configuration =
     HasArgument("Configuration") ? Argument<string>("Configuration") :
@@ -148,15 +150,7 @@ Task("DockerBuild")
             var directoryBuildPropsDocument = System.Xml.Linq.XDocument.Load(directoryBuildPropsFilePath);
             var preReleasePhase = directoryBuildPropsDocument.Descendants("MinVerDefaultPreReleasePhase").Single().Value;
 
-            StartProcess(
-                "dotnet",
-                new ProcessSettings()
-                    .WithArguments(x => x
-                        .Append("minver")
-                        .AppendSwitch("--default-pre-release-phase", preReleasePhase))
-                    .SetRedirectStandardOutput(true),
-                    out var versionLines);
-            return versionLines.LastOrDefault();
+            return MinVer(s => s.WithDefaultPreReleasePhase(preReleasePhase));
         }
 
         string GetGitCommitSha()
