@@ -110,7 +110,7 @@ Task("Test")
             new DotNetCoreTestSettings()
             {
                 Blame = true,
-                Collectors = new string[] { "XPlat Code Coverage" },
+                Collectors = new string[] { "Code Coverage", "XPlat Code Coverage" },
                 Configuration = configuration,
                 Filter = string.Join("&", filters),
                 Loggers = new string[]

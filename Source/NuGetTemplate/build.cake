@@ -46,7 +46,7 @@ Task("Test")
             new DotNetCoreTestSettings()
             {
                 Blame = true,
-                Collectors = new string[] { "XPlat Code Coverage" },
+                Collectors = new string[] { "Code Coverage", "XPlat Code Coverage" },
                 Configuration = configuration,
                 Loggers = new string[]
                 {
