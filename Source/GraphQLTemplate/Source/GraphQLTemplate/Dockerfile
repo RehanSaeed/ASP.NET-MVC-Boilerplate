@@ -5,7 +5,7 @@
 
 # Base image used by Visual Studio at development time
 # (See https://docs.microsoft.com/en-us/visualstudio/containers/container-msbuild-properties)
-FROM mcr.microsoft.com/dotnet/aspnet:5.0-alpine AS base
+FROM mcr.microsoft.com/dotnet/aspnet:6.0-alpine AS base
 # Open Container Initiative (OCI) labels (See https://github.com/opencontainers/image-spec/blob/master/annotations.md).
 LABEL org.opencontainers.image.title="PROJECT-TITLE" \
     org.opencontainers.image.description="PROJECT-DESCRIPTION" \
