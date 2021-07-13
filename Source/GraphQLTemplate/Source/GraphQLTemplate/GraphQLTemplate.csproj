@@ -62,8 +62,8 @@
     <PackageReference Include="HotChocolate.Types.Scalars" Version="11.3.1" />
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.17.0" Condition="'$(ApplicationInsights)' == 'true'" />
     <PackageReference Include="Microsoft.AspNetCore.ApplicationInsights.HostingStartup" Version="2.2.0" Condition="'$(ApplicationInsights)' == 'true'" />
-    <PackageReference Include="Microsoft.AspNetCore.AzureAppServicesIntegration" Version="5.0.7" Condition="'$(Azure)' == 'true'" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.AzureAppServicesIntegration" Version="5.0.8" Condition="'$(Azure)' == 'true'" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.8" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" Condition="'$(Docker)' == 'true'" />
     <PackageReference Include="OpenTelemetry.Exporter.Console" Version="1.1.0" Condition="'$(OpenTelemetry)' == 'true'" />
     <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.0.0-rc7" Condition="'$(OpenTelemetry)' == 'true'" />
