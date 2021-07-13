@@ -45,7 +45,7 @@ The [Microsoft Orleans](https://dotnet.github.io/orleans/) project template uses
 - **HealthCheck** (Default=On) - A health-check endpoint that returns the status of this API and its dependencies, giving an indication of its health.
 - **OpenTelemetry** (Default=Off) - Instrument, generate, collect, and export telemetry data (metrics, logs, and traces) using the Open Telemetry standard.
 - **Analytics** - Monitor internal information about how your application is running, as well as external user information.
-  - **Application Insights** - Monitor internal information about how your application is running, as well as external user information using the Microsoft Azure cloud.
+  - **ApplicationInsights** - Monitor internal information about how your application is running, as well as external user information using the Microsoft Azure cloud.
   - **None** (Default) - Not using any analytics.
 - **ApplicationInsightsKey** - Your Application Insights instrumentation key e.g. 11111111-2222-3333-4444-555555555555.
 

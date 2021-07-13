@@ -370,7 +370,7 @@
       "datatype": "choice",
       "choices": [
         {
-          "choice": "Application Insights",
+          "choice": "ApplicationInsights",
           "description": "Monitor internal information about how your application is running, as well as external user information using the Microsoft Azure cloud."
         },
         {
@@ -383,7 +383,7 @@
     },
     "ApplicationInsights": {
       "type": "computed",
-      "value": "(Analytics == \"Application Insights\")"
+      "value": "(Analytics == \"ApplicationInsights\")"
     },
     "ApplicationInsightsKey": {
       "type": "parameter",

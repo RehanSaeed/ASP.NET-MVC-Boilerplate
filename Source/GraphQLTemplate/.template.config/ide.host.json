@@ -29,6 +29,9 @@
     },
     {
       "id": "SourceControl",
+      "name": {
+        "text": "Source Control"
+      },
       "isVisible": true
     },
     {
@@ -102,7 +105,21 @@
     },
     {
       "id": "Analytics",
-      "isVisible": true
+      "isVisible": true,
+      "choices": [
+        {
+          "id": "ApplicationInsights",
+          "name": {
+            "text": "Application Insights"
+          }
+        },
+        {
+          "id": "None",
+          "name": {
+            "text": "None"
+          }
+        }
+      ]
     },
     {
       "id": "ApplicationInsightsKey",
@@ -188,7 +205,21 @@
       "name": {
         "text": "Docker Registry"
       },
-      "isVisible": true
+      "isVisible": true,
+      "choices": [
+        {
+          "id": "GitHubContainerRegistry",
+          "name": {
+            "text": "GitHub Container Registry"
+          }
+        },
+        {
+          "id": "DockerHub",
+          "name": {
+            "text": "Docker Hub"
+          }
+        }
+      ]
     },
     {
       "id": "GitHubActions",

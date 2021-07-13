@@ -55,7 +55,48 @@
     },
     {
       "id": "SourceControl",
-      "isVisible": true
+      "name": {
+        "text": "Source Control"
+      },
+      "isVisible": true,
+      "choices": [
+        {
+          "id": "AzureDevOpsServer",
+          "name": {
+            "text": "Azure DevOps Server"
+          }
+        },
+        {
+          "id": "AzureRepos",
+          "name": {
+            "text": "Azure Repos"
+          }
+        },
+        {
+          "id": "Bitbucket",
+          "name": {
+            "text": "Bitbucket"
+          }
+        },
+        {
+          "id": "GitHub",
+          "name": {
+            "text": "GitHub"
+          }
+        },
+        {
+          "id": "GitLab",
+          "name": {
+            "text": "GitLab"
+          }
+        },
+        {
+          "id": "None",
+          "name": {
+            "text": "None"
+          }
+        }
+      ]
     },
     {
       "id": "GitHubUsername",
